@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Your Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <link href="{{ url_for('static', path='/cloud.png') }}" rel="icon" type="image/png" sizes="16×16" >
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<div class="ui container">
+
+    <div class ="content_3">
+
+    <h1 class="title">Search Your Details</h1>
+    <p class="paragraph">Enter Your Student Id, First Name or Last Name.</p>
+
+    <form class="ui form" action="/searchstudent" method="get">
+
+    <label class="paragraph" for="StudentId">Student Id:</label><br>
+    <input type="text" id="StudentId" name="StudentId" placeholder="Your 9 digit Sid" required><br>
+
+    <br>
+
+    <label class="paragraph" for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Your First Name" ><br>
+
+    <p class="paragraph"> OR <p>
+
+    <label class="paragraph" for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Your Last Name" ><br>
+
+    <br>
+
+    <button class="ui button" type="submit">Submit</button>
+
+    </form>
+
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+</body>
+</html>

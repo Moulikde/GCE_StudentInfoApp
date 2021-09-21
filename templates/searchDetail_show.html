@@ -1,0 +1,60 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="{{ url_for('static', path='/cloud.png') }}" rel="icon" type="image/png" sizes="16×16" >
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+
+<style>
+    th{
+        color:#fff;
+            }
+</style>
+
+<body>
+    <div class="container">
+
+    <h1>Student Search</h1>
+
+        <table class="table table-striped">
+                <tr class="bg-info">
+                    <th>Student Details</th>
+
+                </tr>
+
+                <tbody id="myTable">
+
+                </tbody>
+        </table>
+
+    </div>
+
+<script>
+
+    var url = `/search${window.location.search}`;
+    function buildTable(array){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < array.length; i++){
+			var row = `<tr>
+                            <td>${array[i]}</td>
+
+					  </tr>`
+			table.innerHTML += row
+		}
+	}
+    fetch(url).then(async val => {
+      var response = await val.json();
+      buildTable(response)
+      console.log(response);
+    }).catch(err => {
+      console.log(err);
+    })
+
+</script>
+
+    <div id="container"><</div>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

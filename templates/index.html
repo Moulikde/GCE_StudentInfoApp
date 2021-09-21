@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/cloud.png') }}" rel="icon" type="image/png" sizes="16×16" >
+
+
+</head>
+
+<body>
+    <div class="ui justified container">
+
+        <div class="content">
+
+            <h1>Student Registration</h1>
+
+            <p>Please select an option.</p>
+
+            <a href="/enterDetails">• Enter Your Details</a>
+            <br/> <br/>
+
+            <a href="/searchDetails">• Check Your Details</a>
+            <br/> <br/>
+
+            <a href="/all">• Check Student Database</a>
+            <br/> <br/>
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

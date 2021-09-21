@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <link href="{{ url_for('static', path='/cloud.png') }}" rel="icon" type="image/png" sizes="16×16" >
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<div class="ui justified container">
+
+    <div class="content_2">
+
+    <h1> Student Detail Form </h1>
+    <p> Enter your details. </p>
+
+    <form class = "ui form" action="/create" method="post" >
+
+    <label for="StudentId">Student Id:</label><br>
+    <input type="number" id="StudentId" name="sid" placeholder="Your 9 digit Sid " min="600000000" max="999999999" required><br>
+
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="name" placeholder="Your First Name" required><br>
+
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="last_name" placeholder="Your Last Name" required><br>
+
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" name="email" placeholder="Your Email Id" required><br>
+
+    <label for="Address">Address:</label><br>
+    <input type="text" id="Address" name="add" placeholder="Your Mailing Address" required><br>
+
+    <label for="GPA">GPA:</label><br>
+    <input type="number" id="GPA" name="gpa" placeholder="GPA" min="0" max="4" step="0.01"><br>
+    <br>
+
+    <button class="ui button" type="submit">Submit</button>
+
+    </form>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+</body>
+</html>

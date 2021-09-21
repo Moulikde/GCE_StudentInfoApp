@@ -1,0 +1,103 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body{
+    background-image: url("MainImg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+h1{
+    color:White;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+}
+
+p{
+    color: White;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+}
+
+a{
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+}
+
+label{
+    color: White;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+}
+
+tr{
+    color: White;
+}
+.content{
+
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px 2px grey;
+    border: 10px solid dimgrey;
+
+    background: black;
+
+}
+
+.content_2{
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px 2px grey;
+    border: 10px solid dimgrey;
+
+    background: black;
+
+}
+
+.content_3{
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 450px;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px 2px grey;
+    border: 10px solid dimgrey;
+
+    background: black;
+
+}
+
+.content_4{
+
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 450px;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px 2px grey;
+    border: 10px solid dimgrey;
+
+    background: black;
+
+}

@@ -1,0 +1,9 @@
+@app.get(path='/all')
+def fetch_all():
+    import mysql.connector
+    cnx = mysql.connector.connect(user='root', host='35.193.76.49', database='StudentInfo', password='12345')
+    cursor = cnx.cursor()
+    query = 'Select * from `StudentInfo`.`Student` ;'
+    cursor.execute(query)
+    data = cursor.fetchall()
+    return data
