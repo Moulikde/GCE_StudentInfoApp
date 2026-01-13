@@ -3,6 +3,10 @@ Basic Student Database App developed using FASTapi and deployed on GCP's Compute
 
 Introduction: This project focuses on demonstrating the use of GCP as a cloud service for hosting websites on the cloud and leveraging the computing capabilities made available to the developers and users by Google’s Distributed computing systems. Software Environment: The software environment is divided into several integral parts:
 
+Steps:
+
+![Overall Steps](images/Steps_for_GCP_StudentInfo_App.JPG)
+
 1. Backend: FastAPI – FastAPI is Python’s framework for backend web development. It is like other Python Web-Dev frameworks like Django and Flask, but it is faster when it comes to querying time from databases. Additionally, it is beginner-friendly and easy to learn. Modern versions of Python that is Python 3.6+ have support for asynchronous code that is the machine can perform several operations in the background while waiting for a slow process.
 
 ![Backend](images/backend-design.png)
@@ -17,4 +21,6 @@ Introduction: This project focuses on demonstrating the use of GCP as a cloud se
 
 5. Frontend: Basic HTML, CSS, and JavaScript.
 
-![Overall Steps](images/Steps_for_GCP_StudentInfo_App.JPG)
+Final Product:
+
+![GCE_StudentInfo_DB](images/GCE_StudentInfoApp.jpeg)
